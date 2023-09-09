@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import { OptButton } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
@@ -5,7 +6,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <div>
       {options.map((option, index) => (
         <OptButton
-          key={index}
+          key={nanoid()}
           name={option}
           onClick={onLeaveFeedback}
           type="button"
